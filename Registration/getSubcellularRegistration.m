@@ -36,7 +36,7 @@ for i = ind
     
     %if it is not registered, register the data
     if ~exist(baseDir, 'dir') || analysisParams.reregister
-      subcellularRegistration(analysisParams.server, char(expInfo.animal{i}), char(expInfo.name{i}),expInfo.vol{i})
+      subcellularRegistration(analysisParams, char(expInfo.animal{i}), char(expInfo.name{i}),expInfo.vol{i})
     end
 
 end

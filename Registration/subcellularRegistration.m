@@ -1,4 +1,4 @@
-function subcellularRegistration(server, animal, name, level)
+function subcellularRegistration(analysisParams, animal, name, level)
 
 %This function registers the raw data and writes the new tif files in the 
 %folder. Current version will be based on SI2016 format and BigTiff reader
@@ -28,13 +28,13 @@ maxMovement = 1/4;
 imagSpatSamp = 0; 
 
 %% Step 1: Data location and tfile folders
-if server == 0
-    drive = 'F:\';
+if analysisParams.server == 0
+    drive = 'F:\Data\';
 else 
     drive = analysisParams.DataPath;
 end
 
-TwoPhontondir = [drive 'Data\2P_Data\'];
+TwoPhontondir = [drive '2P_Data\'];
 tifDirectory= [TwoPhontondir animal filesep name];
 baseTifDir = [tifDirectory '\Registered'];
 

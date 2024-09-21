@@ -51,6 +51,14 @@ switch sheet
         DepthCol = find(contains(xls_txt(1,:), 'Depth'),1);
         denTypeCol = find(contains(xls_txt(1,:), 'denType'),1);
         modCol = find(contains(xls_txt(1,:), 'mod'),1);
+        altNameCol = find(contains(xls_txt(1,:), 'altName'),1);
+   case 'CIB'
+        cellROICol = find(contains(xls_txt(1,:), 'cell ROI'),1);
+        dendROICol = find(contains(xls_txt(1,:), 'dendrite ROI'),1);
+        includeCol = find(contains(xls_txt(1,:), 'Include'),1);
+        DepthCol = find(contains(xls_txt(1,:), 'Depth'),1);
+        denTypeCol = find(contains(xls_txt(1,:), 'denType'),1);
+        modCol = find(contains(xls_txt(1,:), 'mod'),1);
         altNameCol = find(contains(xls_txt(1,:), 'altName'),1);   
 end
 

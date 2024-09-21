@@ -1,4 +1,4 @@
-function info = makeInfoStructExp(server, expInfo, i)
+function info = makeInfoStructExp(analysisParams, expInfo, i)
 
 % This function combines the information from the expInfo according to the
 % analysisParams, basically mostly a rewriting task
@@ -26,8 +26,8 @@ info.Modality = char(expInfo.Modality{i});
 %% Step 1: Based on the server and selected experiments, make a few decisions
 
 %do we work from server or RAID?
-if server
-    info.drive = [analysisParams.DataPath filesep 'Data\'];
+if analysisParams.server
+    info.drive = [analysisParams.DataPath];
 else
     info.drive = 'F:\Data\';
 end
